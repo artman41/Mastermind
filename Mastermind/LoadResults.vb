@@ -18,13 +18,18 @@ Public Class LoadResults
 
             itemSplit = item.Split(New Char() {"|"})
 
+            For Each itemx In itemSplit
+                Console.WriteLine(itemx)
+            Next
+
             Me.DataGridView1.Rows.Add(itemSplit(0), itemSplit(1), itemSplit(2))
         Next
 
     End Sub
 
     Private Function loadData() As List(Of String)
-        Dim data As List(Of String)
+        Dim data As New .
+            List(Of String)
         Try
             Dim sr As New StreamReader(References.dirScore)
 
