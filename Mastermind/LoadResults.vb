@@ -28,8 +28,7 @@ Public Class LoadResults
     End Sub
 
     Private Function loadData() As List(Of String)
-        Dim data As New .
-            List(Of String)
+        Dim data As New List(Of String)
         Try
             Dim sr As New StreamReader(References.dirScore)
 
