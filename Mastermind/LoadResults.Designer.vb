@@ -69,7 +69,7 @@ Partial Class LoadResults
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "LoadResults"
-        Me.Text = "LoadResults"
+        Me.Text = "Highscores"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 

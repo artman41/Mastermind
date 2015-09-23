@@ -51,7 +51,7 @@ Partial Class SaveResults
         Me.Controls.Add(Me.NameBox)
         Me.Controls.Add(Me.ButtonOK)
         Me.Name = "SaveResults"
-        Me.Text = "Results"
+        Me.Text = "Save Score"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
