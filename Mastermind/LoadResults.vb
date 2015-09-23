@@ -10,20 +10,24 @@ Public Class LoadResults
 
         Dim scores As List(Of String) = loadData()
 
-        For Each item In scores
+        Try
+            For Each item In scores
 
-            'String.Format("{0}|{1}|{2}", item)
+                'String.Format("{0}|{1}|{2}", item)
 
-            Dim itemSplit As String()
+                Dim itemSplit As String()
 
-            itemSplit = item.Split(New Char() {"|"})
+                itemSplit = item.Split(New Char() {"|"})
 
-            For Each itemx In itemSplit
-                Console.WriteLine(itemx)
+                For Each itemx In itemSplit
+                    Console.WriteLine(itemx)
+                Next
+
+                Me.DataGridView1.Rows.Add(itemSplit(0), itemSplit(1), itemSplit(2))
             Next
-
-            Me.DataGridView1.Rows.Add(itemSplit(0), itemSplit(1), itemSplit(2))
-        Next
+        Catch ex As NullReferenceException
+            Debug.WriteLine(ex.StackTrace)
+        End Try
 
     End Sub
 
@@ -39,10 +43,10 @@ Public Class LoadResults
 
             Return data
         Catch ex As FileNotFoundException
-            MsgBox(ex.StackTrace)
-            Dim ls As New List(Of String)
-            ls.Add("NAME|0|DIFFICULTY")
-            Return ls
+            MsgBox("No scores detected! Make sure that you've played the game atleast once before!")
+            'Dim ls As New List(Of String)
+            'ls.Add("NAME|0|DIFFICULTY")
+            Return Nothing
         End Try
     End Function
 End Class
