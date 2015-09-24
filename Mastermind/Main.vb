@@ -73,4 +73,13 @@ Public Class Main
         Dim lr As New LoadResults()
         lr.ShowDialog()
     End Sub
+
+    Private Sub ButtonClear_Click(sender As Object, e As EventArgs) Handles ButtonClear.Click
+        If System.IO.File.Exists(References.dirScore) Then
+            System.IO.File.Delete(References.dirScore)
+            MsgBox("Highscores Deleted")
+        Else
+            MsgBox("No Highscores to Delete")
+        End If
+    End Sub
 End Class

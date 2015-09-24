@@ -31,6 +31,7 @@ Partial Class Main
         Me.ButtonMedium = New System.Windows.Forms.Button()
         Me.ButtonEasy = New System.Windows.Forms.Button()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
+        Me.ButtonClear = New System.Windows.Forms.Button()
         Me.TabMenu.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabControl1.SuspendLayout()
@@ -50,6 +51,7 @@ Partial Class Main
         '
         'TabPage1
         '
+        Me.TabPage1.Controls.Add(Me.ButtonClear)
         Me.TabPage1.Controls.Add(Me.ButtonResults)
         Me.TabPage1.Controls.Add(Me.ButtonHard)
         Me.TabPage1.Controls.Add(Me.ButtonMedium)
@@ -64,9 +66,9 @@ Partial Class Main
         '
         'ButtonResults
         '
-        Me.ButtonResults.Location = New System.Drawing.Point(6, 213)
+        Me.ButtonResults.Location = New System.Drawing.Point(6, 201)
         Me.ButtonResults.Name = "ButtonResults"
-        Me.ButtonResults.Size = New System.Drawing.Size(75, 23)
+        Me.ButtonResults.Size = New System.Drawing.Size(75, 35)
         Me.ButtonResults.TabIndex = 3
         Me.ButtonResults.Text = "Highscores"
         Me.ButtonResults.UseVisualStyleBackColor = True
@@ -108,6 +110,15 @@ Partial Class Main
         Me.TabControl1.Size = New System.Drawing.Size(317, 268)
         Me.TabControl1.TabIndex = 0
         '
+        'ButtonClear
+        '
+        Me.ButtonClear.Location = New System.Drawing.Point(228, 201)
+        Me.ButtonClear.Name = "ButtonClear"
+        Me.ButtonClear.Size = New System.Drawing.Size(75, 35)
+        Me.ButtonClear.TabIndex = 4
+        Me.ButtonClear.Text = "Clear Highscores"
+        Me.ButtonClear.UseVisualStyleBackColor = True
+        '
         'Main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -130,4 +141,5 @@ Partial Class Main
     Friend WithEvents ButtonEasy As Button
     Friend WithEvents TabControl1 As TabControl
     Friend WithEvents ButtonResults As Button
+    Friend WithEvents ButtonClear As Button
 End Class
